@@ -9,6 +9,7 @@ dotenv.config()
 const app = express();
 const url = process.env.MONGOURI
 
+app.use(express.json());
 app.use("/api/",productRoutes);
 
 const serviceStart = async () => {
